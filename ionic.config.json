@@ -1,0 +1,7 @@
+{
+  "name": "TauraiDapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

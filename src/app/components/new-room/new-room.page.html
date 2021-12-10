@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create Chat Room</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()" color="danger" fill="clear">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <form [formGroup]="roomForm">
+      <ion-item>
+        <ion-label position="stacked">Room Name</ion-label>
+        <ion-input formControlName="roomName"></ion-input>
+      </ion-item>
+      <ion-button [disabled]="roomForm.invalid" (click)="saveRoom()"
+                  size="large" expand="block" fill="clear">Create Room</ion-button>
+    </form>
+  </ion-card>
+</ion-content>

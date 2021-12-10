@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "TauraiDapp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
