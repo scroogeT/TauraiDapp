@@ -17,7 +17,7 @@ export class ChatRoomsPage implements OnInit {
               private authService: AuthService) { }
 
   ngOnInit() {
-    this.roomsHandle = this.gunService.gun.get('taurai-chat-rooms');
+    this.roomsHandle = this.gunService.gun.get('chat-rooms');
     this.roomsHandle.map().once((room, id) => {
       this.rooms.push(id);
     });

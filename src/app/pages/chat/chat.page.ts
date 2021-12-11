@@ -25,15 +25,11 @@ export class ChatPage implements OnInit {
   async ngOnInit() {
     this.route.params.subscribe(async (params) => {
       this.roomName = params.room;
-      this.chatRoom = this.gunService.gun.get('taurai-chat-rooms').get(this.roomName);
+      this.chatRoom = this.gunService.gun.get('chat-rooms').get(this.roomName);
 
       await this.chatRoom.get('messages').map().once(async (message, id) => {
-        console.log(`message: ${message.content} \nid: ${id}`);
         this.messages.push(message);
         await this.content.scrollToBottom();
-        this.chatRoom.get('messages').get(id).once(async (resp) => {
-          console.log(resp);
-        });
       });
     });
     this.authService.getUsername().then(res => {
@@ -46,7 +42,7 @@ export class ChatPage implements OnInit {
     const msg = this.chatRoom.get(index).put({
       content: this.newMsg,
       sender: this.currentUser.username,
-      createdAt: new Date().toISOString()
+      createdAt: index
     });
 
     this.chatRoom.get('messages').set(msg);

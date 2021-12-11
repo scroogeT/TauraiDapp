@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {NgGunModule} from 'ng-gun';
 import {NewRoomPageModule} from './components/new-room/new-room.module';
+// import 'gun/sea';
+// import 'gun/axe';
 
 const gunConfig = {
   peers: ['http://dev.truqlogistics.com/gun',], // 'http://localhost:8000/gun'
