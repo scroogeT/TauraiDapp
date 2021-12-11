@@ -20,6 +20,6 @@ The instructions to set up your local gun relay can be found here: `https://gith
 
 ##Known issues
 
-**DAM JSON parse error SyntaxError: JSON.parse: unexpected character at line 1 column 2 of the JSON data** - this bug seems to be affecting node propagation and can be observed when new messages are recived but content not displaying
+1. **DAM JSON parse error SyntaxError: JSON.parse: unexpected character at line 1 column 2 of the JSON data** - this bug seems to be affecting node propagation and can be observed when new messages are recived but content not displaying
 
 *Fix*: just reload or leave the chat room to come back to it again (permanent solution coming soon)
