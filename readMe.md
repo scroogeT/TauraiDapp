@@ -18,7 +18,7 @@ The instructions to set up your local gun relay can be found here: `https://gith
 
 **NB: remember to update the new relay address in `app.module` file.**
 
-##Known issues
+## Known issues
 
 1. **DAM JSON parse error SyntaxError: JSON.parse: unexpected character at line 1 column 2 of the JSON data** - this bug seems to be affecting node propagation and can be observed when new messages are recived but content not displaying
 
