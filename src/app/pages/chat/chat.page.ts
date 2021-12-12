@@ -39,13 +39,17 @@ export class ChatPage implements OnInit {
 
   async sendMessage() {
     const index = new Date().toISOString();
-    const msg = this.chatRoom.get(index).put({
+    // const msg = this.chatRoom.get(index).put({
+    //       content: this.newMsg,
+    //       sender: this.currentUser.username,
+    //       createdAt: index
+    //     });
+
+    this.chatRoom.get('messages').set({
       content: this.newMsg,
       sender: this.currentUser.username,
       createdAt: index
     });
-
-    this.chatRoom.get('messages').set(msg);
     this.newMsg = '';
     await this.content.scrollToBottom();
   }
