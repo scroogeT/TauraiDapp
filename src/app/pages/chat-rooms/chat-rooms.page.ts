@@ -16,7 +16,7 @@ export class ChatRoomsPage implements OnInit {
   constructor(private gunService: NgGunService, private displayService: DisplayService,
               private authService: AuthService) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     this.roomsHandle = this.gunService.gun.get('chat-rooms');
     this.roomsHandle.map().once((room, id) => {
       this.rooms.push(id);

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import {AuthGuard} from './guards/auth/auth.guard';
 import {AutoLoginGuard} from './guards/auto-login/auto-login.guard';
+import {RoomMetaService} from './services/RoomMeta/room-meta.service';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'chat/:room',
+    resolve: {room: RoomMetaService},
     loadChildren: () => import('./pages/chat/chat.module').then(m => m.ChatPageModule),
     canLoad: [AuthGuard]
   },
