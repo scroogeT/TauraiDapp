@@ -12,7 +12,7 @@ import {NewRoomPageModule} from './components/new-room/new-room.module';
 // import 'gun/axe';
 
 const gunConfig = {
-  peers: ['http://dev.truqlogistics.com/gun',], // 'http://localhost:8000/gun'
+  peers: ['https://gun-slinger.herokuapp.com/gun',], // 'http://localhost:8000/gun', 'https://gun-manhattan.herokuapp.com/gun'
   modules: {}
 };
 

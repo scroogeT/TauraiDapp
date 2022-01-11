@@ -1,6 +1,6 @@
 # Taurai Decentralised Chat
 
-Taurai, which roughly translates to "now you can talk" in Shona language is a decentralised chat application based on Ionic Angular and GunJS.
+Taurai, which roughly translates to "you can talk" in Shona language is a decentralised chat application based on Ionic Angular and GunJS.
 
 ## How to use
 
